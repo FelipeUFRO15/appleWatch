@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Apple Watch</title>
+		<link rel="icon" href="imagenes/logo.png">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			body { 
+				background-image: url('imagenes/earthFondo2.jpg');
+				background-color: black;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				padding-top: 5em;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--Barra superior (Navbar)-->
+		<header>
+			<nav class="navbar navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+						<!--Logo de la barra superior-->
+						<img src="imagenes/logo.png" class="icono">
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<!--Enlaces hacia página de inicio y galería-->
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Inicio</a></li>
+							<li><a href="galeria.html">Galería</a></li>
+						</ul>
+						<!--Enlace hacia página de noticias-->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="noticias.html"><span class="glyphicon glyphicon-envelope"></span>  Noticias</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!--Primera sección de la página: título, descripción corta, imágen-->
+		<div class="container">
+			<div class="row" id="row1">
+				<div class="col-sm-6" id="colTextoPrincipal">
+					<h1>Todo lo que necesitas al alcance de tu mano.</h1><br>
+					<h4>Apple Watch Series 2 ayuda a organizar tu vida de forma elegante.</h4><br>
+					<center><button type="button" class="btn" id="masInfo" onClick="smoothScroll(document.getElementById('subcont1'))">Más información</button></center>
+				</div>
+				<div class="col-sm-6" id="colImagenPrincipal">
+					<img src="imagenes/watchBT.png" id="imagenPrincipal" class="imagenCol">
+				</div>
+			</div>
+		</div>
+
+		<!--Segunda sección de la página: lista de características, dos imágenes-->
+		<div class="container" id="subcont1">
+			<div class="row" id="row2">
+				<div class="col-sm-3" id="colImagenSecundaria1">
+					<img src="imagenes/watchNT.png" id="imagenPrincipal" class="imagenCol">
+				</div>
+				<div class="col-sm-6" id="colTextoSecundario">
+					<h2>El compañero ideal para una vida saludable.</h2><br>
+					<h4>GPS integrado</h4>
+					<h4>Resistencia al agua hasta 50 metros</h4>
+					<h4>Procesador de doble nucleo</h4>
+					<h4>Pantalla dos veces más brillante</h4>
+					<h4>Aplicaciones de vida saludable</h4>
+				</div>
+				<div class="col-sm-3" id="colImagenSecundaria2">
+					<img src="imagenes/watchBFrente.png" id="imagenPrincipal" class="imagenCol">
+				</div>
+			</div>
+		</div>
+
+		<!--Tercera sección de la página: descripcion de características-->
+		<div class="container" id="subcont2">
+			<center>
+				<div class="row" id="row3">
+					<div class="col-sm-4" id="colCaracteristicas1">
+						<h3>GPS integrado</h3><br>
+						<h5>Gracias al GPS integrado, el Apple Watch Series 2 registra con precisión datos como la distancia, la velocidad y el ritmo mientras caminas, corres o andas en bici.</h5>
+					</div>
+					<div class="col-sm-4" id="colCaracteristicas2">
+						<h3>Sensor de frecuencia cardiaca</h3><br>
+						<h5>Un sensor personalizado mide continuamente tu frecuencia cardiaca mientras usas la app Entrenamiento. Puedes ver esta información junto con otros datos importantes, e incluso destacarla para consultarla de un vistazo.</h5>
+					</div>
+					<div class="col-sm-4" id="colCaracteristicas3">
+						<h3>Resistencia al agua</h3><br>
+						<h5>El Apple Watch Series 2 tiene una clasificación de resistencia al agua de hasta 50 metros1, para que lo puedas usar en la piscina, en el mar o incluso en el jacuzzi. Como los parlantes no pueden sellarse, ya que necesitan aire para generar sonido, decidimos rediseñarlos: dejan que entre el agua y usan las vibraciones de sonido para expulsarla.</h5>
+					</div>
+				</div>
+			</center>
+		</div>
+
+		<!--Pie de página-->
+		<div class="pie">
+			<center><h2>Apple</h2></center>
+		</div>
+
+		<!--Script para desplazar la página hacia abajo al presionar botón "Más información"-->
+		<script type="text/javascript">
+			window.smoothScroll = function(target) {
+			    var scrollContainer = target;
+			    do { //find scroll container
+			        scrollContainer = scrollContainer.parentNode;
+			        if (!scrollContainer) return;
+			        scrollContainer.scrollTop += 1;
+			    } while (scrollContainer.scrollTop == 0);
+
+			    var targetY = 0;
+			    do { //find the top of target relatively to the container
+			        if (target == scrollContainer) break;
+			        targetY += target.offsetTop;
+			    } while (target = target.offsetParent);
+
+			    scroll = function(c, a, b, i) {
+			        i++; if (i > 30) return;
+			        c.scrollTop = a + (b - a) / 30 * i;
+			        setTimeout(function(){ scroll(c, a, b, i); }, 5);
+			    }
+			    // start scrolling
+			    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+/*Color de fondo, texto, y transparencia para navbar*/
+.navbar {
+	background-color: #eeeeee;
+	color: gray;
+	opacity: 1;
+}
+
+/*Tamaño y margen de ícono del navbar*/
+.icono {
+	width: 3em;
+	height: 3em;
+	margin-top: 0.3em;
+}
+
+/*Texto del navbar*/
+li a {
+	color: gray;
+}
+
+/*Botón de información*/
+#masInfo {
+	width: 80%;
+	opacity: 0.9;
+}
+
+/*Para el pie de página*/
+.pie {
+	background-color:#eeeeee;
+	color: gray;
+	height: 100%;
+	bottom: 0;
+}
+
+/*Limita ancho de ciertos elementos*/
+#subcont1, #subcont2, #contGaleria {
+	width: 80%;
+}
+
+/*Texto de página principal*/
+#colTextoPrincipal h4 {
+	padding-left: 4em;
+	padding-right: 6em;
+	color: lightgray;
+}
+
+/*Título de página principal*/
+#colTextoPrincipal h1 {
+	color: #eeeeee;
+	padding-left: 2em;
+	padding-right: 3em;
+}
+
+/*Relleno de texto secundario del índice*/
+#colTextoSecundario {
+	padding-left: 5em;
+}
+
+/*Color de texto secundario del índice*/
+#colTextoSecundario h2 {
+	color: #eeeeee;
+}
+
+/*Color de texto secundario del índice*/
+#colTextoSecundario h4 {
+	color: lightgray;
+}
+
+#row3 h3 {
+	color: #eeeeee;
+}
+
+#row3 h5 {
+	color: lightgray;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.container {
+	margin-bottom: 5em;
+}
+
+.imagenCol {
+	width: 100%;
+}
+
+/*Página de noticias*/
+#contNoticias {
+	background-color: #eeeeee;
+	opacity: 0.8;
+	width: 80%;
+}
+
+#contNoticias form {
+	margin-top: 1em;
+}
+
+#contNoticias form div label{
+	color: gray;
+}
+
+#contNoticias form div input{
+	background-color: lightgray;
+}
+
+#contNoticias form button{
+	color: white;
+}
+
+#contNoticias #texto1 {
+	color: gray;
+}
+
+#contNoticias #texto2 {
+	color: black;
+}

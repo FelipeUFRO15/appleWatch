@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Apple Watch</title>
+		<link rel="icon" href="imagenes/logo.png">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			body { 
+				background-image: url('imagenes/earthFondo2.jpg');
+				background-color: black;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				padding-top: 5em;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--Barra superior (Navbar)-->
+		<header>
+			<nav class="navbar navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+						<!--Logo de la barra superior-->
+						<img src="imagenes/logo.png" class="icono">
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<!--Enlaces hacia página de inicio y galería-->
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Inicio</a></li>
+							<li><a href="galeria.html">Galería</a></li>
+						</ul>
+						<!--Enlace hacia página de noticias-->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="noticias.html"><span class="glyphicon glyphicon-envelope"></span>  Noticias</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!--Formulario para que usuario registre datos de contacto-->
+		<div class="container" id="contNoticias">
+			<form>
+				<div class="form-group">
+					<label for="inputName">Nombre</label>
+					<input type="name" class="form-control" placeholder="Nombre">
+				</div>
+				<div class="form-group">
+					<label for="inputEmail">Email</label>
+					<input type="email" class="form-control" placeholder="Email">
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox">Recuérdame</label>
+				</div>
+				<button type="submit" class="btn btn-primary">Registrar</button>
+			<!-- Texto -->
+ 			<div id="texto1"><h2>Mantente informado sobre Apple Watch.</h2></div>
+  			<div id="texto2"><h4>Registrando tu nombre y tu correo, recibirás las últimas noticias sobre el Apple Watch y el resto de nuestros productos directamente en tu bandeja de entrada para que las disfrutes en el momento.</h4></div>
+			</form>
+		</div>
+
+		<!--Pie de página-->
+		<div class="pie">
+			<center><h2>Apple</h2></center>
+		</div>
+	</body>
+</html>
